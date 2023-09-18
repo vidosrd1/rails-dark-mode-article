@@ -22,8 +22,8 @@
       </nav>
 
       <div class="flex space-x-1">
-        <div>
-          <%= image_tag("icons/light-bulb.svg", class: 'w-6 h-6 hover:cursor-pointer') %>
+        <div data-controller="dark-mode">
+          <%= image_tag("icons/light-bulb.svg", class: 'w-6 h-6 hover:cursor-pointer', data: { action: 'click->dark-mode#toggle'}) %>
         </div>
         <a href="#">Log In</a>
       </div>
