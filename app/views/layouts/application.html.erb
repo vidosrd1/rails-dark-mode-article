@@ -10,11 +10,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-    <script>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
-      }
-    </script>
+    <%= render "layouts/dark_mode_check" %>
   </head>
 
   <body class="bg-neutral-100 dark:bg-neutral-900">
